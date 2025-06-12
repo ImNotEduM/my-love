@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Feliz Dia dos Namorados ❤️ | Hello Kitty 🎀</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <div class="hearts-container"></div>
+
+  <div class="container">
+    <div class="header">
+      <img src="hello-kitty.png" alt="Hello Kitty" class="kitty-icon" />
+      <h1>Feliz Dia dos Namo(que não somos Namorados)KKKK</h1>
+    </div>
+
+    <p class="love-text">
+      Desde que você entrou na minha vida, tudo ficou mais bonito, mais leve e mais cheio de sentido.<br />
+      Seu sorriso ilumina meus dias, seu abraço é meu lar, e seu amor é meu maior presente.<br />
+      Obrigado por ser quem você !
+    </p>
+
+    <p class="admire">✨ Quando eu te admiro, o mundo inteiro some e só resta você. ✨</p>
+    <div class="hearts">💖 💕 💘 💞 💓</div>
+
+    <button onclick="mostrarMensagem()" class="surprise-button">Clique para uma surpresa 💌</button>
+    <div id="mensagem-surpresa" class="mensagem-escondida">
+      Você é o melhor presente que a vida me deu. Te amo mais do que palavras podem dizer! 💖
+    </div>
+  </div>
+
+  <script>
+    function mostrarMensagem() {
+      const mensagem = document.getElementById('mensagem-surpresa');
+      mensagem.classList.toggle('ativa');
+    }
+
+    // Hello Kitties flutuando
+    setInterval(() => {
+      const kitty = document.createElement('img');
+      kitty.src = "hello-kitty.png";
+      kitty.classList.add('kitty-float');
+      kitty.style.left = Math.random() * 100 + "vw";
+      kitty.style.animationDuration = (Math.random() * 2 + 3) + "s";
+      document.querySelector('.hearts-container').appendChild(kitty);
+      setTimeout(() => {
+        kitty.remove();
+      }, 6000);
+    }, 400);
+  </script>
+</body>
+
+</html>
