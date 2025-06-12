@@ -16,6 +16,13 @@ body {
     overflow-x: hidden;
     position: relative;
 }
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
 
 h1 {
     font-family: 'Dancing Script', cursive;
@@ -35,7 +42,10 @@ h1 {
     margin: 0 auto;
     animation: fadeIn 2s ease-in-out;
 }
-
+.kitty-icon {
+  width: 70px;
+  height: auto;
+}
 
 
 .love-text {
@@ -178,4 +188,11 @@ h1 {
         bottom: 5px;
         right: 5px;
     }
+      .header {
+    flex-direction: column;
+  }
+
+  .kitty-icon {
+    width: 50px;
+  }
 }
